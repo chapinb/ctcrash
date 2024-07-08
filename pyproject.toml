@@ -1,0 +1,30 @@
+[project]
+name = "ctcrash"
+version = "0.1.0"
+description = "Notebooks and utilities for analyzing data from the UCONN CT Crash Data Repository"
+authors = [
+    { name = "Chapin Bryce" }
+]
+dependencies = [
+    "jupyterlab>=4.2.3",
+    "pandas>=2.2.2",
+    "matplotlib>=3.9.1",
+    "seaborn>=0.13.2",
+    "folium>=0.17.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ctcrash"]
